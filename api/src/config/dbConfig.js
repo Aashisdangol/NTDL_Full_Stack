@@ -2,7 +2,7 @@
 
 import mongoose from "mongoose";
 
-const CONNECTION_URI = process.env.CONNECTION_URI
+const CONNECTION_URI=process.env.CONNECTION_URI
 
 export const connectToMongoDb = () => {
   try {
