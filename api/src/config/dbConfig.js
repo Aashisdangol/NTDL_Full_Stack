@@ -2,8 +2,7 @@
 
 import mongoose from "mongoose";
 
-const DATABASE_NAME = 'ntdl_db'
-const CONNECTION_URI = 'mongodb://localhost:27017/' + DATABASE_NAME
+const CONNECTION_URI = 'mongodb://0.0.0.0:27017/ntdl_db'
 
 export const connectToMongoDb = () => {
   try {
@@ -13,6 +12,6 @@ export const connectToMongoDb = () => {
       console.log("Database conected at", CONNECTION_URI);
     }
   } catch (error) {
-    console.log("Db connection Error", error);
+    console.log("Db connection Error", error.message);
   }
 }

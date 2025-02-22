@@ -1,4 +1,6 @@
 import axios from "axios"
+// import { updateTask } from "../../../api/src/model/taskModel"
+// import taskRouter from "../../../api/src/router/taskRouter"
 
 // This file sends api request for task resource
 const API_BASE_URL = 'http://localhost:8000'
@@ -26,6 +28,33 @@ export const createTask = (taskObject) => {
 
   return response
 }
+
+
+
+// // UPDATE | PATCH single Task
+// taskRouter.patch("/:id", (req, res) => {
+//   const udpatedTaskObject = req.body
+//   const id = req.params.id
+
+//   updateTask(id, udpatedTaskObject)
+//     .then(task => {
+//       res.json({
+//         status: "success",
+//         message: "Task Updated",
+//         data: task
+//       })
+//     })
+//     .catch(error => {
+//       res.json({
+//         status: "error",
+//         error: error.message || 'Could not create task'
+//       })
+//     })
+// })
+
+
+
+
 
 // DELETE | Delete a task
 export const deleteTaskRequest = (id) => {
