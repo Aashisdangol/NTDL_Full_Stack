@@ -3,7 +3,7 @@ import axios from "axios"
 // import taskRouter from "../../../api/src/router/taskRouter"
 
 // This file sends api request for task resource
-const API_BASE_URL = 'http://localhost:8000'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 const TASK_ENPOINT = '/api/tasks'
 
 // FRONTEND CRUD OPERATIONS
