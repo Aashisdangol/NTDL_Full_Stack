@@ -29,28 +29,20 @@ export const createTask = (taskObject) => {
   return response
 }
 
+// PATCH || Update task
+
+export const updateTaskRequest = (id, taskObject) => {
+  const response = axios
+    .patch(API_BASE_URL + TASK_ENPOINT + `/${id}`, taskObject)
+    .then((res) => res.data)
+    .catch((error) => error);
+
+    return response
+};
 
 
-// // UPDATE | PATCH single Task
-// taskRouter.patch("/:id", (req, res) => {
-//   const udpatedTaskObject = req.body
-//   const id = req.params.id
 
-//   updateTask(id, udpatedTaskObject)
-//     .then(task => {
-//       res.json({
-//         status: "success",
-//         message: "Task Updated",
-//         data: task
-//       })
-//     })
-//     .catch(error => {
-//       res.json({
-//         status: "error",
-//         error: error.message || 'Could not create task'
-//       })
-//     })
-// })
+
 
 
 
