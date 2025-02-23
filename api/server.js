@@ -7,7 +7,7 @@ import path from "path"
 
 const _dirname = path.resolve()
 const app = express()
-const PORT = process.env.PORT||8000 
+const PORT = process.env.PORT||3000 
 
 // middleware to parse request
 app.use(express.json());
