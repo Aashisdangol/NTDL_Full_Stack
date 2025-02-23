@@ -1,8 +1,8 @@
 // This file is used to connect API with Db
 
 import mongoose from "mongoose";
-
-const CONNECTION_URI=process.env.CONNECTION_URI
+const DATABASE_NAME = "ntdl_db"
+const CONNECTION_URI=process.env.CONNECTION_URI + DATABASE_NAME
 
 export const connectToMongoDb = () => {
   try {
